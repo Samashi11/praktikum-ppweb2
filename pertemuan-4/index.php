@@ -5,43 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Submission</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <div class="container">
-    <h2>Selamat Datang di Perpustakaan STT-NF</h2>
-    <p>Silahkan isi Buku Tamu di bawah ini</p>
-    <hr>
-    <form method="post" action="kunjungan.php">
-      <div class="form-group row">
-        <label for="fullname" class="col-4 col-form-label">Nama Lengkap</label>
-        <div class="col-8">
-          <input id="fullname" name="fullname" placeholder="Masukkan Nama" type="text" required="required"
-            class="form-control">
+<body class="bg-light">
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+      <h3 class="text-center mb-3">Selamat Datang di Perpustakaan STT-NF</h3>
+      <p class="text-center text-muted">Silahkan isi Buku Tamu di bawah ini</p>
+      <hr>
+      <form method="post" action="kunjungan.php">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Nama Lengkap</label>
+          <input id="fullname" name="fullname" type="text" class="form-control" placeholder="Masukkan Nama" required>
         </div>
-      </div>
-      <div class="form-group row">
-        <label for="email" class="col-4 col-form-label">Email</label>
-        <div class="col-8">
-          <input id="email" name="email" placeholder="Masukkan Email" type="text" class="form-control"
-            required="required">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" type="email" class="form-control" placeholder="Masukkan Email" required>
         </div>
-      </div>
-      <div class="form-group row">
-        <label for="message" class="col-4 col-form-label">Keperluan</label>
-        <div class="col-8">
-          <textarea id="message" name="message" cols="40" rows="5" required="required" class="form-control"></textarea>
+        <div class="mb-3">
+          <label for="message" class="form-label">Keperluan</label>
+          <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tuliskan keperluan Anda"
+            required></textarea>
         </div>
-      </div>
-      <div class="form-group row">
-        <div class="offset-4 col-8">
-          <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </form>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
